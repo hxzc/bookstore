@@ -6,13 +6,14 @@
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
   </head>
-  <body>
+  <body class="store">
     <div class="top">
       <%=image_tag("logo.png")%>
       <%="BookStore"%>
     </div>
     <div class="content">
       <div class="left">
+        <%=@time%>
       	<ul>
          <li><a href="http://www.baidu.com">百度一下</a></li> 
          <li><a href="http://www.baidu.com">百度一下</a></li> 
