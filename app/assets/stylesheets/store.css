@@ -6,6 +6,7 @@
   font-size: 38px;
   font-weight: bold;
   color: #282;
+  background: #9c9;
   text-align: center;
 }
 img {
@@ -13,13 +14,13 @@ img {
 }
 .content{
   width: 100%;
-  background: #666;
+  background: #9f9;
   height: 500px;
 }
 .left{
   float: left;
   width: 18%;
-  background: #666;
+  background: #9d9;
   height: 100%;
 }
 .main{
