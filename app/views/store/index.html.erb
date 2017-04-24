@@ -1,0 +1,13 @@
+<%= stylesheet_link_tag  "store", :media => "all" %>
+<h1>All Books</h1>
+<%@products.each do |product|%>
+<div class="entry">
+  <h2><%=product.title%></h2>
+  <%=sanitize(product.description)%>
+  <div class="price_line">
+    <span class="price">
+      <%=number_to_currency(product.price,unit:"￥")%>
+    </span>
+  </div>
+</div>
+<%end%>

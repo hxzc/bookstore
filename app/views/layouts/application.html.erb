@@ -1,12 +1,26 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Bookstore</title>
-  <%= stylesheet_link_tag    "products", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-<%= yield %>
-</body>
+  <head>
+    <title>Bookstore</title>
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div class="top">
+      <%=image_tag("logo.png")%>
+      <%="BookStore"%>
+    </div>
+    <div class="content">
+      <div class="left">
+      	<ul>
+         <li><a href="http://www.baidu.com">百度一下</a></li> 
+         <li><a href="http://www.baidu.com">百度一下</a></li> 
+        </ul>
+      </div>
+      <div class="main">
+      	<%= yield %>
+      </div>
+    </div>
+  </body>
 </html>

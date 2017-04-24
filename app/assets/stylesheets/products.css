@@ -44,3 +44,11 @@ dd {
 .list_line_odd {
   background: #f8b0f8;
 }
+#notice { 
+  color: #000 !important; 
+  border: 2pxsolid red; 
+  padding: 1em; 
+  margin-bottom: 2em; 
+  background-color: #f0f0f0; 
+  font: bold smaller sans-serif; 
+}
