@@ -1,4 +1,3 @@
-<p id="notice"><%= notice %></p>
 <%= stylesheet_link_tag  "store", :media => "all" %>
 <h1>All Books</h1>
 <%@products.each do |product|%>
@@ -11,7 +10,8 @@
     <span class="price">
       <%=number_to_currency(product.price,unit:"￥")%>
     </span>
-    <%=button_to("添加到购物车",line_items_path(product_id:product))%>
+    <%=button_to("添加到购物车",line_items_path(product_id:product),
+      :remote=>true)%>
   </div>
 </div>
 <%end%>
