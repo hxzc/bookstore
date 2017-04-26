@@ -1,5 +1,21 @@
-<p id="notice"><%= notice %></p>
-<%@cart.line_items.each do |item|%>
-<%=item.product.title%><br>
-<% end %>
-<%=button_to("to index",store_path)%>
+<div class="cart_title">购物车</div>
+<table class="cart_list" border="1">
+  <%@cart.line_items.each do |item|%>
+    <tr height=30px>
+      <td width="50px"><%=item.quantity%>&times;</td>
+      <td><%=item.product.title%></td>
+      <td width="80px" class="item_price">
+        <%=number_to_currency(item.total_price,unit:"￥")%>
+      </td>
+    </tr>
+  <% end %>
+    <tr class="total_line">
+      <td colspan="2" align="left">总价</td>
+      <td class="total_cell">
+      	<%=number_to_currency(@cart.total_price,unit:"￥")%>
+      </td>
+    </tr>
+</table>
+<%=button_to("返回商品目录",store_path)%>
+<%=button_to("清空购物车",@cart,:method => :delete,
+	comfirm:"确认清空吗？")%>
