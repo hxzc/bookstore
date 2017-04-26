@@ -1,4 +1,12 @@
-<p id="notice"><%= notice %></p>
-<%@cart.line_items.each do |item|%>
-<%=item.product.title%><br>
-<% end %>
+
+<h2>Your Book Cart</h2>
+<ul>
+  <%@cart.line_items.each do |item|%>
+    <li>
+      <%=item.quantity%>&times; <%=item.product.title%>
+    </li>
+  <% end %>
+</ul>
+<%=button_to("back to index",store_path)%>
+<%= link_to 'Show', @cart %> |
+<%= link_to 'Back', carts_path %>
