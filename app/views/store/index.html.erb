@@ -1,5 +1,8 @@
 <%= stylesheet_link_tag  "store", :media => "all" %>
 <h1>All Books</h1>
+<%if session[:counter] > 5%>
+There are <%=pluralize(session[:counter],'time')%>
+<% end %>
 <%@products.each do |product|%>
 <div class="entry">
   <h2>
