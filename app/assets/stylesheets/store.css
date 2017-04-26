@@ -31,3 +31,17 @@ img {
   padding-left: 2%;
   padding-top: 2%;
 }
+.cart_title{
+  font:120% bold;
+  text-align: center;
+}
+.cart_list{
+  text-align: center;
+}
+.item_price .total_line{
+  text-align: right;
+}
+.total_line .total_cell{
+  font-weight: bold;
+  border-top: 1px solid #595;
+}
