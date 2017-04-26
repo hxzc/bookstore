@@ -7,6 +7,7 @@ There are <%=pluralize(session[:counter],'time')%>
 <%@products.each do |product|%>
 <div class="entry">
   <h2>
+    <%=product.id%>
   	<%=product.title%>
   </h2>
   <%=sanitize(product.description)%>

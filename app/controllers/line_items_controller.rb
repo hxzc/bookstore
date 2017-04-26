@@ -75,7 +75,7 @@ class LineItemsController < ApplicationController
   # DELETE /line_items/1
   # DELETE /line_items/1.json
   def destroy
-    @line_item = LineItem.find(params[:id])
+    @line_item = LineItem.find(params[:item_id])
     @line_item.destroy
 
     respond_to do |format|

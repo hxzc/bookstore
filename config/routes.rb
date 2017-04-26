@@ -1,6 +1,6 @@
 Bookstore::Application.routes.draw do
   resources :line_items
-
+  
   get "store/index"
 
   resources :carts

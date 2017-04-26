@@ -5,6 +5,7 @@ class Product < ActiveRecord::Base
   validates :title, uniqueness:true
   #validates :title, length:{minimum:5,maximum:10}
   #validates_length_of :title, maximum:10	#验证字符长度
+  default_scope :order=>'id'
   has_many :line_items
   before_destroy :ensure_not_refenrenced_by_any_line_item
   def ensure_not_refenrenced_by_any_line_item

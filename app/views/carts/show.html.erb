@@ -3,10 +3,12 @@
   <%@cart.line_items.each do |item|%>
     <tr height=30px>
       <td width="50px"><%=item.quantity%>&times;</td>
-      <td><%=item.product.title%></td>
+      <td><%=item.product.title%> <%=item.id%> <%=item.product.id%></td>
       <td width="80px" class="item_price">
         <%=number_to_currency(item.total_price,unit:"￥")%>
       </td>
+      <td width="50px"><%=button_to("删除",line_item_path(item_id:item),
+        :method => :delete)%></td>
     </tr>
   <% end %>
     <tr class="total_line">
@@ -14,6 +16,7 @@
       <td class="total_cell">
       	<%=number_to_currency(@cart.total_price,unit:"￥")%>
       </td>
+      <td></td>
     </tr>
 </table>
 <%=button_to("返回商品目录",store_path)%>
