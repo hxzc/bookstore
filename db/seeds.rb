@@ -12,3 +12,8 @@ Product.create(
 	price:50.50,
 	description:%{Ruby 是一门面向对象的编程语言。}
 )
+Product.create(
+	title:"Java",
+	price:50.50,
+	description:%{Java 是一门面向对象的编程语言。}
+)
