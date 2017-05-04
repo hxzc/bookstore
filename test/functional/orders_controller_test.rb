@@ -5,23 +5,23 @@ class OrdersControllerTest < ActionController::TestCase
     @order = orders(:one)
   end
 
-  test "requires item in cart" do
-    get :new
-    assert_redirected_to store_path
-    assert_equal flash[:notice], "Your cart is empty"
-  end
-
   test "should get index" do
     get :index
     assert_response :success
     assert_not_nil assigns(:orders)
   end
 
+  test "require item in cart" do
+    get :new
+    assert_redirected_to store_path
+    assert_equal flash[:notice], 'Your cart is empty'
+  end
+
   test "should get new" do
     cart = Cart.create
-    session[:cart_id]=cart.id
-    LineItem.create(cart:cart,product: products(:Ruby))
-    
+    session[:cart_id] = cart.id
+    LineItem.create(cart: cart, product: products(:Ruby))
+
     get :new
     assert_response :success
   end
