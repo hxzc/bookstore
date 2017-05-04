@@ -3,7 +3,6 @@ module ApplicationHelper
     if condition
       attributes["style"] = "display: none"
     end
-
     content_tag("div", attributes, &block)
   end
 end
