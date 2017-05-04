@@ -1,4 +1,14 @@
 Bookstore::Application.routes.draw do
+  get 'admin' => 'admin#index'
+
+  controller :session do
+    get    'login'  => :new
+    post   'login'  => :create
+    delete 'logout' => :destroy
+  end
+
+  resources :users
+
   resources :orders
 
   resources :line_items
