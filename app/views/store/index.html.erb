@@ -1,4 +1,6 @@
-<p id="notice"><%= notice %></p>
+<% if notice %>
+  <p id="notice"><%= notice %></p>
+<% end %>
 <%= stylesheet_link_tag  "store", :media => "all" %>
 <h1>All Books</h1>
 <%@products.each do |product|%>
