@@ -21,8 +21,15 @@
         <%end%>
         </div>
       	<ul>
-         <li><a href="http://www.baidu.com">百度一下</a></li> 
-         <li><a href="http://www.baidu.com">百度一下</a></li> 
+          <li><a href="http://www.baidu.com">百度一下</a></li> 
+          <li><a href="http://www.baidu.com">百度一下</a></li> 
+          <% if session[:user_id] %>
+          <br/>
+          <li><%=link_to '订单',orders_path %></li><br/>
+          <li><%=link_to '商品',products_path %></li><br/>
+          <li><%=link_to '用户',users_path %></li><br/><br/>
+          <%=button_to '退出',logout_path,method: :delete%>
+          <% end %>
         </ul>
       </div>
       <div class="main">
