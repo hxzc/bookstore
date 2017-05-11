@@ -7,9 +7,9 @@ class ApplicationController < ActionController::Base
       Cart.find(session[:cart_id])
     rescue ActiveRecord::RecordNotFound
       cart = Cart.create
-	  session[:cart_id] = cart.id
-	  cart
-	end
+	    session[:cart_id] = cart.id
+	    cart
+	  end
 
   protected
     def authorize
