@@ -1,7 +1,4 @@
-# Sample localization file for English. Add more files in this directory for other locales.
-# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
-
-en:
+es:
   will_paginate:
     page_gap:        "..."
 
@@ -48,7 +45,3 @@ en:
       next:          "下一页"
     new:
       msg:           "请输入您的信息"
-
-
-
-

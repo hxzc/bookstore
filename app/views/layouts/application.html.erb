@@ -8,8 +8,14 @@
   </head>
   <body class="store">
     <div class="top">
+      <%=form_tag store_path,class:'locale' do%>
+        <%=select_tag 'select_tag',
+          options_for_select(LANGUAGES,I18n.locale.to_s),
+          onchange:'this.form.submit()'%>
+        <%=javascript_tag "$$('.locale input').each(Element.hide)"%>
+      <%end%>
       <%=image_tag("logo.png")%>
-      <%="BookStore"%>
+      <%=t('.title')%>
     </div>
     <div class="content">
       <div class="left">
@@ -21,14 +27,15 @@
         <%end%>
         </div>
       	<ul>
-          <li><a href="http://www.baidu.com">百度一下</a></li> 
-          <li><a href="http://www.baidu.com">百度一下</a></li> 
           <% if session[:user_id] %>
-          <br/>
-          <li><%=link_to '订单',orders_path %></li><br/>
-          <li><%=link_to '商品',products_path %></li><br/>
-          <li><%=link_to '用户',users_path %></li><br/><br/>
-          <%=button_to '退出',logout_path,method: :delete%>
+          <li><%=link_to t('.order'),orders_path %></li><br/>
+          <li><%=link_to t('.product'),products_path %></li><br/>
+          <li><%=link_to t('.user'),users_path %></li><br/><br/>
+          <%=button_to t('.exit'),logout_path,method: :delete%>
+          <%else%>
+          <li>
+            <%=link_to t('.register'),controller:"users",action:"new"%>
+          </li>
           <% end %>
         </ul>
       </div>

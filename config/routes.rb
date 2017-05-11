@@ -6,22 +6,16 @@ Bookstore::Application.routes.draw do
     post   'login'  => :create
     delete 'logout' => :destroy
   end
-
-  get "orders/demo"
-  resources :users
-
-  resources :orders
-
-  resources :line_items
-  
   get "store/index"
-
-  resources :carts
-
-  resources :products do
-    get :who_bought,on: :member
+  scope '(:locale)' do
+    resources :users
+    resources :orders
+    resources :line_items
+    resources :carts
+    resources :products do
+      get :who_bought,on: :member
+    end
   end
-  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

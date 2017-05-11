@@ -1,3 +1,4 @@
 <h1>欢迎您<%=@hx.name%></h1>
 现在是北京时间<%=@time%><br/>
-这儿有<%=pluralize(@total_orders,"order")%>。
+这儿有<%=pluralize(@total_orders,"order")%>。<br>
+<%=link_to 'back_to_index',store_path%>
