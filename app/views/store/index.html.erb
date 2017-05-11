@@ -13,7 +13,10 @@
     <span class="price">
       <%=number_to_currency(product.price,unit:"￥")%>
     </span>
-    <%=button_to("添加到购物车",line_items_path(product_id:product),remote:true)%>
+    <form action="/line_items?product_id=<%=product.id%>" method="post" data-remote='true'>
+      <input type="text" name="quantity" size="2" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')">
+      <input type="submit" value="添加到购物车">
+    </form>
   </div>
 </div>
 <%end%>

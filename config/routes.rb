@@ -7,12 +7,13 @@ Bookstore::Application.routes.draw do
     delete 'logout' => :destroy
   end
 
+  get "orders/demo"
   resources :users
 
   resources :orders
 
   resources :line_items
-
+  
   get "store/index"
 
   resources :carts
