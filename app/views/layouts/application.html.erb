@@ -30,7 +30,8 @@
           <% if session[:user_id] %>
           <li><%=link_to t('.order'),orders_path %></li><br/>
           <li><%=link_to t('.product'),products_path %></li><br/>
-          <li><%=link_to t('.user'),users_path %></li><br/><br/>
+          <li><%=link_to t('.user'),users_path %></li><br/>
+          <li><%=link_to t('.index'),store_path%></li><br/><br/>
           <%=button_to t('.exit'),logout_path,method: :delete%>
           <%else%>
           <li>

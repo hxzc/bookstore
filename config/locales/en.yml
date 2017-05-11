@@ -13,6 +13,7 @@ en:
       user:          "用户"
       exit:          "退出"
       register:      "注册"
+      index:         "首页"
   admin:
     index:
       back_to_index: "返回首页"
