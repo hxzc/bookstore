@@ -1,15 +1,21 @@
-es:
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+zh:
   will_paginate:
     page_gap:        "..."
 
   layouts:
     application:
-      title:         "网上书店"
+      Chinese:       "中文"
+      English:       "英文"
+      title:         "网上商店"
       order:         "订单"
       product:       "商品"
       user:          "用户"
       exit:          "退出"
       register:      "注册"
+      index:         "首页"
   admin:
     index:
       back_to_index: "返回首页"
@@ -45,3 +51,7 @@ es:
       next:          "下一页"
     new:
       msg:           "请输入您的信息"
+
+
+
+

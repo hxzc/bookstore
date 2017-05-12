@@ -8,12 +8,13 @@
   </head>
   <body class="store">
     <div class="top">
-      <%=form_tag store_path,class:'locale' do%>
-        <%=select_tag 'select_tag',
+      <%=form_tag store_path(path:self.controller_path()),class: 'locale' do%>
+        <%=select_tag 'set_locale',
           options_for_select(LANGUAGES,I18n.locale.to_s),
           onchange:'this.form.submit()'%>
-        <%=javascript_tag "$$('.locale input').each(Element.hide)"%>
+        <%=javascript_tag "$('.locale input').each(Element.hide)"%>
       <%end%>
+
       <%=image_tag("logo.png")%>
       <%=t('.title')%>
     </div>
